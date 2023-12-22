@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,7 +51,11 @@ public class MainActivity extends AppCompatActivity {
         if (view.getId() == R.id.btnMult)
             result = num1 * num2;
         if (view.getId() == R.id.btnDiv)
-            result = num1 / num2;
+            if (num2==0){
+                Toast.makeText(this, "Cant divide by 0", Toast.LENGTH_LONG).show();
+            }else {
+                result = num1 / num2;
+            }
         if (result != null) {
             TextView tvRes = findViewById(R.id.tvResult);
             tvRes.setText(result.toString());
