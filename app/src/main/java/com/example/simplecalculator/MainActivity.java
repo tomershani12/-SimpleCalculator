@@ -27,12 +27,12 @@ public class MainActivity extends AppCompatActivity {
 
     // Cast the String into Integer
         Integer num1 = Integer.valueOf(et1Text);
-//num 2
+    //num 2
         // Get view handle using the view id
         EditText et2 = findViewById(R.id.Num2);
 
 // Get the view’s text
-        String et2Text = et1.getText().toString();
+        String et2Text = et2.getText().toString();
 
 // Cast the String into Integer
         Integer num2 = Integer.valueOf(et2Text);
